@@ -65,9 +65,33 @@
                                     <constraint firstAttribute="height" constant="75" id="D1w-wq-QRl"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ng8-5G-Ut5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ng8-5G-Ut5">
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="427.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dLa-2e-qvo">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dLa-2e-qvo" id="KPF-do-trd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82c-Gm-gGM">
+                                                    <rect key="frame" x="35" y="12" width="65.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="82c-Gm-gGM" firstAttribute="centerY" secondItem="KPF-do-trd" secondAttribute="centerY" id="6cl-Ra-YNW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82c-Gm-gGM" secondAttribute="trailing" constant="20" symbolic="YES" id="EQo-Yz-6zE"/>
+                                                <constraint firstItem="82c-Gm-gGM" firstAttribute="leading" secondItem="KPF-do-trd" secondAttribute="leadingMargin" constant="20" id="TSq-E3-RAi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6l-9p-Uba">
                                 <rect key="frame" x="16" y="85" width="59" height="17"/>
@@ -87,6 +111,7 @@
                             <constraint firstItem="GxZ-uZ-QaR" firstAttribute="trailing" secondItem="VSD-p7-rtp" secondAttribute="trailing" constant="221" id="Tat-b9-Trv"/>
                             <constraint firstItem="GxZ-uZ-QaR" firstAttribute="trailing" secondItem="wy7-kn-m2m" secondAttribute="trailing" constant="77" id="Xmx-tM-THc"/>
                             <constraint firstItem="Ng8-5G-Ut5" firstAttribute="trailing" secondItem="GxZ-uZ-QaR" secondAttribute="trailing" id="YHa-Zi-c5p"/>
+                            <constraint firstItem="GxZ-uZ-QaR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cUF-Nr-ZHG" secondAttribute="trailing" symbolic="YES" id="ajA-jP-1Wl"/>
                             <constraint firstItem="VSD-p7-rtp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9np-z3-UWQ" secondAttribute="trailing" symbolic="YES" id="egy-st-h2z"/>
                             <constraint firstItem="cUF-Nr-ZHG" firstAttribute="top" secondItem="GxZ-uZ-QaR" secondAttribute="top" constant="24" id="i65-BF-w4H"/>
                             <constraint firstItem="Ng8-5G-Ut5" firstAttribute="leading" secondItem="GxZ-uZ-QaR" secondAttribute="leading" id="ipG-G7-3s0"/>
