@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		3DAA77E7DBBCF0B56D3F7841 /* Pods_Smack_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF860AE7B419255A595D4EEF /* Pods_Smack_Chat_App.framework */; };
 		97ECC94321B706EA0050E19E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECC94221B706EA0050E19E /* AppDelegate.swift */; };
-		97ECC94521B706EA0050E19E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECC94421B706EA0050E19E /* ViewController.swift */; };
+		97ECC94521B706EA0050E19E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECC94421B706EA0050E19E /* ChatVC.swift */; };
 		97ECC94821B706EA0050E19E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97ECC94621B706EA0050E19E /* Main.storyboard */; };
 		97ECC94A21B706EB0050E19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97ECC94921B706EB0050E19E /* Assets.xcassets */; };
 		97ECC94D21B706EB0050E19E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97ECC94B21B706EB0050E19E /* LaunchScreen.storyboard */; };
 		97ECC95821B712D60050E19E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97ECC95721B712D60050E19E /* SWRevealViewController.m */; };
+		97ECC95E21B71A690050E19E /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECC95D21B71A690050E19E /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E4EF8F53289257BE4AA8FC3 /* Pods-Smack-Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-Chat App/Pods-Smack-Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		97ECC93F21B706EA0050E19E /* Smack-Chat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smack-Chat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97ECC94221B706EA0050E19E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97ECC94421B706EA0050E19E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97ECC94421B706EA0050E19E /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		97ECC94721B706EA0050E19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97ECC94921B706EB0050E19E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97ECC94C21B706EB0050E19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		97ECC95521B712D50050E19E /* Smack-Chat App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Chat App-Bridging-Header.h"; sourceTree = "<group>"; };
 		97ECC95621B712D60050E19E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		97ECC95721B712D60050E19E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		97ECC95D21B71A690050E19E /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		CF860AE7B419255A595D4EEF /* Pods_Smack_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BCB10F9196FF028038FC09 /* Pods-Smack-Chat App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-Chat App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-Chat App/Pods-Smack-Chat App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,9 +84,11 @@
 		97ECC94121B706EA0050E19E /* Smack-Chat App */ = {
 			isa = PBXGroup;
 			children = (
+				97ECC95C21B71A410050E19E /* Model */,
+				97ECC95B21B71A370050E19E /* View */,
+				97ECC95921B71A240050E19E /* Controller */,
 				97ECC95421B712C40050E19E /* Supporting Files */,
 				97ECC94221B706EA0050E19E /* AppDelegate.swift */,
-				97ECC94421B706EA0050E19E /* ViewController.swift */,
 				97ECC94621B706EA0050E19E /* Main.storyboard */,
 				97ECC94921B706EB0050E19E /* Assets.xcassets */,
 				97ECC94B21B706EB0050E19E /* LaunchScreen.storyboard */,
@@ -101,6 +105,29 @@
 				97ECC95521B712D50050E19E /* Smack-Chat App-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97ECC95921B71A240050E19E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97ECC94421B706EA0050E19E /* ChatVC.swift */,
+				97ECC95D21B71A690050E19E /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		97ECC95B21B71A370050E19E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97ECC95C21B71A410050E19E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97ECC94521B706EA0050E19E /* ViewController.swift in Sources */,
+				97ECC95E21B71A690050E19E /* ChannelVC.swift in Sources */,
+				97ECC94521B706EA0050E19E /* ChatVC.swift in Sources */,
 				97ECC94321B706EA0050E19E /* AppDelegate.swift in Sources */,
 				97ECC95821B712D60050E19E /* SWRevealViewController.m in Sources */,
 			);
