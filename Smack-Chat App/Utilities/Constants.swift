@@ -9,4 +9,5 @@
 import Foundation
 
 //Segues
-public var TO_LOGIN = "toLogin"
+let TO_LOGIN = "toLogin"
+let TO_SIGNUP = "toCreateAccount"
