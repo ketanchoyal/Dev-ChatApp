@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="137"/>
+            <point key="canvasLocation" x="-113" y="243"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="KCO-6d-yDn">
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXV-aK-VcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="417"/>
+            <point key="canvasLocation" x="786" y="699"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="C2z-Ca-fNE">
@@ -258,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrz-n0-Qeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695" y="417"/>
+            <point key="canvasLocation" x="1590" y="699"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="NPB-ew-sWE">
@@ -407,16 +407,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H9e-GA-glQ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="com-4M-slf"/>
                     <connections>
                         <outlet property="emailTxt" destination="BOy-rf-elx" id="xer-nX-EZc"/>
                         <outlet property="passwordTxt" destination="jap-ju-76C" id="iHj-js-vnQ"/>
                         <outlet property="userImage" destination="7ND-5E-lw7" id="nzh-T4-CSs"/>
                         <outlet property="usernameTxt" destination="MoA-iP-DtV" id="t9G-AR-t64"/>
+                        <segue destination="TbF-1o-PFA" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="BIS-Rb-2sN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsy-fg-kM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TbF-1o-PFA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="417"/>
+            <point key="canvasLocation" x="2334" y="699"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="FPl-C5-0kv">
@@ -469,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcy-jb-AS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-261"/>
+            <point key="canvasLocation" x="785" y="-107"/>
         </scene>
     </scenes>
     <resources>

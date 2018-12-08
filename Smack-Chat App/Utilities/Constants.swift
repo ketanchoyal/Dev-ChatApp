@@ -13,6 +13,7 @@ typealias CompletionHandler = (_ Success : Bool) -> ()
 //Segues
 let TO_LOGIN = "toLogin"
 let TO_SIGNUP = "toCreateAccount"
+let UNWIND = "unwindToChannel"
 
 //User Defaults
 let LOGGED_IN_KEY = "loggedin"
@@ -23,6 +24,7 @@ let USER_EMAIL = "userEmail"
 let BASE_URL = "https://chatappbyketanchoyal.herokuapp.com/v1/"
 let URL_REGISTER = BASE_URL + "account/register"
 let URL_LOGIN = BASE_URL + "account/login"
+let URL_CREATE_ADD = BASE_URL + "user/add"
 
 //Headers
 let HEADER = [
