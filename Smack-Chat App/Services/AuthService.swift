@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService {
     
@@ -42,31 +43,60 @@ class AuthService {
         }
     }
     
-    func registerUser(email : String, passsword : String, completion : @escaping CompletionHandler) {
+    func registerUser(email : String, password : String, completion : @escaping CompletionHandler) {
         
         let lowerCaseEmail = email.lowercased()
         
-        let header = [
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
         let body : [String : Any] = [
             "email" : lowerCaseEmail,
-            "password" : passsword
+            "password" : password
         ]
         
-        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString {
+            (response) in
             
             if response.result.error == nil {
                 completion(true)
+                
+                self.loginUser(email: lowerCaseEmail, password: password, competion: { (success) in
+                    
+                    print("logged in user!", self.authToken)
+                    
+                })
             }
             else {
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
+        }
+    }
+    
+    func loginUser(email : String, password : String, competion : @escaping CompletionHandler) {
+        let lowerCaseEmail = email.lowercased()
+        
+        let body : [String : Any] = [
+            "email" : lowerCaseEmail,
+            "password" : password
+        ]
+        
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                
+                guard let data = response.data else { return }
+                let json = JSON(data: data)
+                self.userEmail = json["user"].stringValue
+                self.authToken = json["token"].stringValue
+                
+                self.isLoggedin = true
+                competion(true)
+            }
+            else {
+                competion(false)
+                debugPrint(response.result.error as Any)
+            }
             
         }
-        
         
     }
     
