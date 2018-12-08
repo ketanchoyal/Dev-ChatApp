@@ -20,5 +20,5 @@ let TOKEN_KEY = "token"
 let USER_EMAIL = "userEmail"
 
 //URL Constants
-let BASE_URL = "/v1/"
+let BASE_URL = "https://chatappbyketanchoyal.herokuapp.com/v1/"
 let URL_REGISTER = BASE_URL + "account/register"
