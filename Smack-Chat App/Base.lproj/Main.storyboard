@@ -52,7 +52,7 @@
                                 <state key="normal" image="addChannelButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSD-p7-rtp">
-                                <rect key="frame" x="96" y="593.5" width="43" height="32"/>
+                                <rect key="frame" x="99" y="593.5" width="43" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="427.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dLa-2e-qvo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dLa-2e-qvo">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dLa-2e-qvo" id="KPF-do-trd">
@@ -88,7 +88,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="82c-Gm-gGM" firstAttribute="centerY" secondItem="KPF-do-trd" secondAttribute="centerY" id="6cl-Ra-YNW"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82c-Gm-gGM" secondAttribute="trailing" constant="20" symbolic="YES" id="EQo-Yz-6zE"/>
                                                 <constraint firstItem="82c-Gm-gGM" firstAttribute="leading" secondItem="KPF-do-trd" secondAttribute="leadingMargin" constant="20" id="TSq-E3-RAi"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -114,7 +113,7 @@
                             <constraint firstItem="GxZ-uZ-QaR" firstAttribute="trailing" secondItem="wy7-kn-m2m" secondAttribute="trailing" constant="77" id="Xmx-tM-THc"/>
                             <constraint firstItem="Ng8-5G-Ut5" firstAttribute="trailing" secondItem="GxZ-uZ-QaR" secondAttribute="trailing" id="YHa-Zi-c5p"/>
                             <constraint firstItem="GxZ-uZ-QaR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cUF-Nr-ZHG" secondAttribute="trailing" symbolic="YES" id="ajA-jP-1Wl"/>
-                            <constraint firstItem="VSD-p7-rtp" firstAttribute="leading" secondItem="9np-z3-UWQ" secondAttribute="trailing" constant="5" id="egy-st-h2z"/>
+                            <constraint firstItem="VSD-p7-rtp" firstAttribute="leading" secondItem="9np-z3-UWQ" secondAttribute="trailing" constant="8" id="egy-st-h2z"/>
                             <constraint firstItem="cUF-Nr-ZHG" firstAttribute="top" secondItem="GxZ-uZ-QaR" secondAttribute="top" constant="24" id="i65-BF-w4H"/>
                             <constraint firstItem="Ng8-5G-Ut5" firstAttribute="leading" secondItem="GxZ-uZ-QaR" secondAttribute="leading" id="ipG-G7-3s0"/>
                             <constraint firstItem="D6l-9p-Uba" firstAttribute="top" secondItem="cUF-Nr-ZHG" secondAttribute="bottom" constant="18" id="rvk-bs-feY"/>
@@ -134,6 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="VSD-p7-rtp" id="73A-vl-N7a"/>
+                        <outlet property="userImage" destination="9np-z3-UWQ" id="gi4-A5-UVq"/>
                         <segue destination="XM3-8c-N9c" kind="presentation" identifier="toLogin" id="o3z-es-lak"/>
                     </connections>
                 </viewController>
