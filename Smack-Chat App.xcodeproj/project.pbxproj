@@ -10,6 +10,8 @@
 		3DAA77E7DBBCF0B56D3F7841 /* Pods_Smack_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF860AE7B419255A595D4EEF /* Pods_Smack_Chat_App.framework */; };
 		972082D521B9B7DB00B53597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D421B9B7DA00B53597 /* Constants.swift */; };
 		972082D721B9BD6000B53597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D621B9BD6000B53597 /* LoginVC.swift */; };
+		973AEE5321BD0A44003D29A9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEE5221BD0A44003D29A9 /* CircleImage.swift */; };
+		973AEE5721BD15FA003D29A9 /* AttributedTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */; };
 		9743075521B7A052000D50EF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9743075421B7A052000D50EF /* GradientView.swift */; };
 		9769671621BC5E6900D23CEF /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769671521BC5E6900D23CEF /* AvatarPickerVC.swift */; };
 		9769671821BC614000D23CEF /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769671721BC614000D23CEF /* AvatarCell.swift */; };
@@ -30,6 +32,8 @@
 		6E4EF8F53289257BE4AA8FC3 /* Pods-Smack-Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-Chat App/Pods-Smack-Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		972082D421B9B7DA00B53597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		972082D621B9BD6000B53597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		973AEE5221BD0A44003D29A9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextColor.swift; sourceTree = "<group>"; };
 		9743075421B7A052000D50EF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9769671521BC5E6900D23CEF /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		9769671721BC614000D23CEF /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				9743075421B7A052000D50EF /* GradientView.swift */,
 				976BC82721BBD27C002F70C3 /* RoundedButton.swift */,
 				9769671721BC614000D23CEF /* AvatarCell.swift */,
+				973AEE5221BD0A44003D29A9 /* CircleImage.swift */,
+				973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				97ECC95E21B71A690050E19E /* ChannelVC.swift in Sources */,
 				9769671621BC5E6900D23CEF /* AvatarPickerVC.swift in Sources */,
 				976BC82821BBD27C002F70C3 /* RoundedButton.swift in Sources */,
+				973AEE5321BD0A44003D29A9 /* CircleImage.swift in Sources */,
+				973AEE5721BD15FA003D29A9 /* AttributedTextColor.swift in Sources */,
 				97ECC94521B706EA0050E19E /* ChatVC.swift in Sources */,
 				976BC82A21BC23E7002F70C3 /* UserDataService.swift in Sources */,
 				97DCCDEE21BA96BC00712BC9 /* CreateAccountVC.swift in Sources */,

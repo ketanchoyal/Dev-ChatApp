@@ -16,6 +16,12 @@ let TO_SIGNUP = "toCreateAccount"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 
+//Colors
+let smackPurplePlaceholder = #colorLiteral(red: 0.3631127477, green: 0.4045833051, blue: 0.8775706887, alpha: 0.5)
+
+//Notification Constants
+let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChanged")
+
 //User Defaults
 let LOGGED_IN_KEY = "loggedin"
 let TOKEN_KEY = "token"
