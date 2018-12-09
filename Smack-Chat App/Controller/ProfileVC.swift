@@ -25,9 +25,6 @@ class ProfileVC: UIViewController {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGE, object: nil)
         dismiss(animated: true, completion: nil)
-        
-//        profileImage.image = UIImage(named: "menuProfileIcon")
-//        profileImage.backgroundColor = UIColor.clear
     }
     
     @IBAction func closePressed(_ sender: Any) {

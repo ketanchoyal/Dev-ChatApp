@@ -165,6 +165,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="XM3-8c-N9c" eventType="touchUpInside" id="pHx-Wx-J4M"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iM4-Md-QUJ">
                                 <rect key="frame" x="126.5" y="70" width="122.5" height="40"/>
@@ -190,7 +193,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-6r-gWb">
                                 <rect key="frame" x="62.5" y="160" width="250" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-rl-dsn">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-rl-dsn" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="duW-Lz-eci"/>
@@ -198,6 +201,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="email"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3f-di-GnW">
                                         <rect key="frame" x="0.0" y="31" width="250" height="2"/>
@@ -207,7 +213,7 @@
                                             <constraint firstAttribute="height" constant="2" id="KHg-YA-MD5"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-f9-AkY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-f9-AkY" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="47" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Yuv-hm-vRd"/>
@@ -215,6 +221,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="password"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7U-Fn-l5J">
                                         <rect key="frame" x="0.0" y="78" width="250" height="2"/>
@@ -236,6 +245,10 @@
                                     <action selector="signupPressed:" destination="XM3-8c-N9c" eventType="touchUpInside" id="fMa-fZ-xdj"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lFt-go-LxL">
+                                <rect key="frame" x="169" y="235" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -243,16 +256,22 @@
                             <constraint firstItem="iM4-Md-QUJ" firstAttribute="top" secondItem="OZZ-5j-9FG" secondAttribute="top" constant="50" id="5oE-ja-ERp"/>
                             <constraint firstItem="w4D-44-xdF" firstAttribute="top" secondItem="OZZ-5j-9FG" secondAttribute="top" constant="8" id="A8w-DV-7i7"/>
                             <constraint firstItem="kgJ-ll-dxl" firstAttribute="top" secondItem="J3B-6r-gWb" secondAttribute="bottom" constant="40" id="CWY-97-oBb"/>
+                            <constraint firstItem="lFt-go-LxL" firstAttribute="centerX" secondItem="IPU-3Z-Ip9" secondAttribute="centerX" id="Fjd-gT-wSU"/>
                             <constraint firstItem="kgJ-ll-dxl" firstAttribute="centerX" secondItem="IPU-3Z-Ip9" secondAttribute="centerX" id="JDE-Rj-1E1"/>
                             <constraint firstItem="J3B-6r-gWb" firstAttribute="top" secondItem="iM4-Md-QUJ" secondAttribute="bottom" constant="50" id="LLj-Sz-Qiq"/>
                             <constraint firstItem="J3B-6r-gWb" firstAttribute="centerX" secondItem="IPU-3Z-Ip9" secondAttribute="centerX" id="SJK-AY-A08"/>
                             <constraint firstItem="LzX-a0-9hy" firstAttribute="centerX" secondItem="IPU-3Z-Ip9" secondAttribute="centerX" id="jzF-sM-483"/>
+                            <constraint firstItem="lFt-go-LxL" firstAttribute="centerY" secondItem="IPU-3Z-Ip9" secondAttribute="centerY" constant="-80" id="mvr-Ye-hbK"/>
                             <constraint firstItem="w4D-44-xdF" firstAttribute="trailing" secondItem="IPU-3Z-Ip9" secondAttribute="trailingMargin" id="rzn-nM-38i"/>
                             <constraint firstItem="iM4-Md-QUJ" firstAttribute="centerX" secondItem="IPU-3Z-Ip9" secondAttribute="centerX" id="suV-AM-vDH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OZZ-5j-9FG"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="k9u-rl-dsn" id="S3n-aA-ehp"/>
+                        <outlet property="loginBtn" destination="kgJ-ll-dxl" id="MfX-sZ-I8R"/>
+                        <outlet property="passwordTxt" destination="v3U-f9-AkY" id="zxN-kC-4Yu"/>
+                        <outlet property="spinner" destination="lFt-go-LxL" id="HPl-C2-7Oz"/>
                         <segue destination="rmG-Ft-RR8" kind="presentation" identifier="toCreateAccount" id="t0B-IL-tu5"/>
                     </connections>
                 </viewController>
@@ -396,8 +415,9 @@
                                     <action selector="chooseAvatarPressed:" destination="rmG-Ft-RR8" eventType="touchUpInside" id="1OJ-Pa-gyl"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-gq-Iuk">
-                                <rect key="frame" x="177.5" y="243.5" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-gq-Iuk">
+                                <rect key="frame" x="169" y="235" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

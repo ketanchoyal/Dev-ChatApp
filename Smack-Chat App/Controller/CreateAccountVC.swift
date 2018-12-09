@@ -62,19 +62,17 @@ class CreateAccountVC: UIViewController {
                     if success {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
-                                self.spinner.isHidden = true
-                                self.spinner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
-                                self.createAccountBtn.isEnabled = true
+                                self.UIUpdate()
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGE, object: nil)
                             }
-                            else {  self.createAccountBtn.isEnabled = true }
+                            else { self.UIUpdate() }
                         })
                     }
-                    else {  self.createAccountBtn.isEnabled = true }
+                    else { self.UIUpdate() }
                 })
             }
-            else { self.createAccountBtn.isEnabled = true }
+            else { self.UIUpdate() }
         }
     }
     
@@ -108,6 +106,12 @@ class CreateAccountVC: UIViewController {
     
     @objc func handleTap() {
         view.endEditing(true)
+    }
+    
+    func UIUpdate() {
+        self.createAccountBtn.isEnabled = true
+        self.spinner.isHidden = true
+        self.spinner.stopAnimating()
     }
     
 }

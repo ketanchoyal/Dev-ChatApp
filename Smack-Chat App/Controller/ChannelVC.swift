@@ -23,6 +23,10 @@ class ChannelVC: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+    }
+    
     @IBAction func loginBtnPressed(_ sender: Any) {
         
         if AuthService.instance.isLoggedin {
@@ -33,11 +37,13 @@ class ChannelVC: UIViewController {
         else {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
-        
     }
     
     @objc func userDataDidChanged(_ notif : Notification) {
-        
+        setupUserInfo()
+    }
+    
+    func setupUserInfo() {
         if AuthService.instance.isLoggedin {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
@@ -48,6 +54,5 @@ class ChannelVC: UIViewController {
             userImage.image = UIImage(named: "menuProfileIcon")
             userImage.backgroundColor = UIColor.clear
         }
-        
     }
 }
