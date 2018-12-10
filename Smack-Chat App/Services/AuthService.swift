@@ -65,9 +65,8 @@ class AuthService {
         }
     }
     
-    func loginUser(email : String, password : String, competion : @escaping CompletionHandler) {
+    func loginUser(email : String, password : String, completion : @escaping CompletionHandler) {
         let lowerCaseEmail = email.lowercased()
-        
         let body : [String : Any] = [
             "email" : lowerCaseEmail,
             "password" : password
@@ -83,10 +82,10 @@ class AuthService {
                 self.authToken = json["token"].stringValue
                 
                 self.isLoggedin = true
-                competion(true)
+                completion(true)
             }
             else {
-                competion(false)
+                completion(false)
                 debugPrint(response.result.error as Any)
             }
             

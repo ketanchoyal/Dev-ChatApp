@@ -18,7 +18,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        spinner.isHidden = true
+        setupView()
     }
     
     @IBAction func closePressed(_ sender: Any) {
@@ -36,7 +36,7 @@ class LoginVC: UIViewController {
         spinner.startAnimating()
         loginBtn.isEnabled = false
         
-        AuthService.instance.loginUser(email: email, password: pass, competion: { (success) in
+        AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
                     if success {
@@ -61,5 +61,16 @@ class LoginVC: UIViewController {
         self.loginBtn.isEnabled = true
         self.spinner.isHidden = true
         self.spinner.stopAnimating()
+    }
+    
+    func setupView() {
+        spinner.isHidden = true
+        
+        let tap = UITapGestureRecognizer(target: self, action:  #selector(handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
 }

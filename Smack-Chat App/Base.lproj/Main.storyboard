@@ -50,6 +50,9 @@
                                     <constraint firstAttribute="width" constant="22" id="3z0-MO-vPQ"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addchannelPressed:" destination="lVA-2p-gcg" eventType="touchUpInside" id="d83-1M-WpI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSD-p7-rtp">
                                 <rect key="frame" x="99" y="593.5" width="43" height="32"/>
