@@ -36,8 +36,9 @@ let URL_REGISTER = BASE_URL + "account/register"
 let URL_LOGIN = BASE_URL + "account/login"
 let URL_CREATE_ADD = BASE_URL + "user/add"
 let URL_USER_BY_EMAIL = BASE_URL + "user/byEmail/"
-let URL_GET_CHANLLES = BASE_URL + "channel"
+let URL_GET_CHANNLES = BASE_URL + "channel/"
 let URL_ADD_CHANNEL = BASE_URL + "channel/add"
+let URL_GET_MESSAGES = BASE_URL + "message/byChannel/"
 
 //Headers
 let HEADER = [

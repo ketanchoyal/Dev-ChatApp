@@ -43,16 +43,30 @@ class ChatVC: UIViewController {
     
     @objc func userDataDidChanged(_ notif : Notification) {
         if AuthService.instance.isLoggedin {
-            onLoginGetChannels()
+            onLoginGetMessages()
         } else {
             chatChannelLabel.text = "Please Log in"
         }
     }
     
-    func onLoginGetChannels() {
+    func onLoginGetMessages() {
         MessageService.instance.findAllChannels { (success) in
             if success {
-                //Do stuff
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.chatChannelLabel.text = "No channels Yet!"
+                }
+            }
+        }
+    }
+    
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessagesForChannel(channelID: channelId) { (success) in
+            if success {
+                
             }
         }
     }
