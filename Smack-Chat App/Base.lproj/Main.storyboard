@@ -590,11 +590,39 @@
                                     <constraint firstItem="TGc-xs-YjE" firstAttribute="centerY" secondItem="MbN-LU-De1" secondAttribute="centerY" id="glY-BY-oEq"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-vS-jwp" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                <rect key="frame" x="2" y="619" width="337" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eDY-A5-BTC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Message"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcC-XG-ydo">
+                                <rect key="frame" x="341" y="624" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RKk-JI-8Xh"/>
+                                    <constraint firstAttribute="width" constant="30" id="lMb-wx-AAo"/>
+                                </constraints>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="msgSendPressed:" destination="Bgk-u5-hFs" eventType="touchUpInside" id="LYQ-da-TP5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XcC-XG-ydo" firstAttribute="leading" secondItem="sxV-vS-jwp" secondAttribute="trailing" constant="2" id="3mn-qH-yFA"/>
+                            <constraint firstItem="sxV-vS-jwp" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" constant="2" id="4Gd-DZ-9IY"/>
+                            <constraint firstItem="aey-DD-AwS" firstAttribute="bottom" secondItem="sxV-vS-jwp" secondAttribute="bottom" constant="8" id="GZW-xz-WVi"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="fAd-IQ-yFv"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="top" secondItem="oPP-8c-qTw" secondAttribute="top" id="i2k-hb-LWi"/>
+                            <constraint firstItem="XcC-XG-ydo" firstAttribute="centerY" secondItem="sxV-vS-jwp" secondAttribute="centerY" id="oHn-S9-b5g"/>
+                            <constraint firstItem="aey-DD-AwS" firstAttribute="trailing" secondItem="XcC-XG-ydo" secondAttribute="trailing" constant="4" id="pIF-Ut-15y"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="trailing" secondItem="aey-DD-AwS" secondAttribute="trailing" id="y9Y-gr-vHg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aey-DD-AwS"/>
@@ -602,11 +630,12 @@
                     <connections>
                         <outlet property="chatChannelLabel" destination="TGc-xs-YjE" id="4UI-oo-hT0"/>
                         <outlet property="menuBtn" destination="MbN-LU-De1" id="yhD-oY-2yg"/>
+                        <outlet property="messageTxtBox" destination="sxV-vS-jwp" id="F9d-U1-pLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcy-jb-AS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="-107"/>
+            <point key="canvasLocation" x="784.79999999999995" y="-107.49625187406298"/>
         </scene>
     </scenes>
     <resources>
@@ -614,6 +643,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>

@@ -13,16 +13,21 @@ class ChatVC: UIViewController {
     //IBOutlet
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var chatChannelLabel: UILabel!
+    @IBOutlet weak var messageTxtBox: AttributedTextColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bindToKeyboard()
         
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        
+        let tap = UITapGestureRecognizer(target: self, action:  #selector(handleTap))
+        view.addGestureRecognizer(tap)
+        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChanged(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
-     
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
         if AuthService.instance.isLoggedin {
@@ -36,9 +41,14 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     func updateWithChannel() {
         let chatLabel = MessageService.instance.selectedChannel?.channelTitle ?? ""
         chatChannelLabel.text = "#" + chatLabel
+        getMessages()
     }
     
     @objc func userDataDidChanged(_ notif : Notification) {
@@ -46,6 +56,19 @@ class ChatVC: UIViewController {
             onLoginGetMessages()
         } else {
             chatChannelLabel.text = "Please Log in"
+        }
+    }
+    @IBAction func msgSendPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedin {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let messageBody = messageTxtBox.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: messageBody, channelId: channelId) { (success) in
+                if success {
+                    self.messageTxtBox.text = nil
+                    self.messageTxtBox.placeholderText = "message"
+                }
+            }
         }
     }
     

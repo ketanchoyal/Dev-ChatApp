@@ -88,6 +88,7 @@ class MessageService {
                         self.messages.append(message)
                     }
                     completion(true)
+                    print(self.messages)
                 }
                 
             } else {

@@ -24,6 +24,7 @@ let smackPurplePlaceholder = #colorLiteral(red: 0.3631127477, green: 0.404583305
 let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChanged")
 let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
 let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
+//let NOTIF_KEYBOARD_BOUND = Notification.na
 
 //User Defaults
 let LOGGED_IN_KEY = "loggedin"

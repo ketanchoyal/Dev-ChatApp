@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3DAA77E7DBBCF0B56D3F7841 /* Pods_Smack_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF860AE7B419255A595D4EEF /* Pods_Smack_Chat_App.framework */; };
 		971CC74921BEE29C009E0033 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CC74821BEE29C009E0033 /* Message.swift */; };
+		971CC74D21BEFE6C009E0033 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CC74C21BEFE6B009E0033 /* KeyboardBoundView.swift */; };
 		972082D521B9B7DB00B53597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D421B9B7DA00B53597 /* Constants.swift */; };
 		972082D721B9BD6000B53597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D621B9BD6000B53597 /* LoginVC.swift */; };
 		972A1D8421BE37C1003E734E /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A1D8321BE37C0003E734E /* MessageService.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		6E4EF8F53289257BE4AA8FC3 /* Pods-Smack-Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-Chat App/Pods-Smack-Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		971CC74821BEE29C009E0033 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		971CC74C21BEFE6B009E0033 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		972082D421B9B7DA00B53597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		972082D621B9BD6000B53597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		972A1D8321BE37C0003E734E /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				973AEE5221BD0A44003D29A9 /* CircleImage.swift */,
 				973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */,
 				972A1D8721BE5DF4003E734E /* ChannelCell.swift */,
+				971CC74C21BEFE6B009E0033 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				97ECC95E21B71A690050E19E /* ChannelVC.swift in Sources */,
 				973AEE5A21BD3962003D29A9 /* ProfileVC.swift in Sources */,
+				971CC74D21BEFE6C009E0033 /* KeyboardBoundView.swift in Sources */,
 				9769671621BC5E6900D23CEF /* AvatarPickerVC.swift in Sources */,
 				976BC82821BBD27C002F70C3 /* RoundedButton.swift in Sources */,
 				973AEE5321BD0A44003D29A9 /* CircleImage.swift in Sources */,
