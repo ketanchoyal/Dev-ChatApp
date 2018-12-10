@@ -10,6 +10,8 @@
 		3DAA77E7DBBCF0B56D3F7841 /* Pods_Smack_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF860AE7B419255A595D4EEF /* Pods_Smack_Chat_App.framework */; };
 		972082D521B9B7DB00B53597 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D421B9B7DA00B53597 /* Constants.swift */; };
 		972082D721B9BD6000B53597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972082D621B9BD6000B53597 /* LoginVC.swift */; };
+		972A1D8421BE37C1003E734E /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A1D8321BE37C0003E734E /* MessageService.swift */; };
+		972A1D8621BE37D7003E734E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A1D8521BE37D7003E734E /* Channel.swift */; };
 		973AEE5321BD0A44003D29A9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEE5221BD0A44003D29A9 /* CircleImage.swift */; };
 		973AEE5721BD15FA003D29A9 /* AttributedTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */; };
 		973AEE5A21BD3962003D29A9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEE5821BD3962003D29A9 /* ProfileVC.swift */; };
@@ -34,6 +36,8 @@
 		6E4EF8F53289257BE4AA8FC3 /* Pods-Smack-Chat App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack-Chat App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack-Chat App/Pods-Smack-Chat App.debug.xcconfig"; sourceTree = "<group>"; };
 		972082D421B9B7DA00B53597 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		972082D621B9BD6000B53597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		972A1D8321BE37C0003E734E /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		972A1D8521BE37D7003E734E /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		973AEE5221BD0A44003D29A9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		973AEE5621BD15FA003D29A9 /* AttributedTextColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextColor.swift; sourceTree = "<group>"; };
 		973AEE5821BD3962003D29A9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				97C373E121BBB60F00566B18 /* AuthService.swift */,
 				976BC82921BC23E7002F70C3 /* UserDataService.swift */,
+				972A1D8321BE37C0003E734E /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		97ECC95C21B71A410050E19E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				972A1D8521BE37D7003E734E /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 				976BC82821BBD27C002F70C3 /* RoundedButton.swift in Sources */,
 				973AEE5321BD0A44003D29A9 /* CircleImage.swift in Sources */,
 				973AEE5721BD15FA003D29A9 /* AttributedTextColor.swift in Sources */,
+				972A1D8421BE37C1003E734E /* MessageService.swift in Sources */,
+				972A1D8621BE37D7003E734E /* Channel.swift in Sources */,
 				97ECC94521B706EA0050E19E /* ChatVC.swift in Sources */,
 				976BC82A21BC23E7002F70C3 /* UserDataService.swift in Sources */,
 				97DCCDEE21BA96BC00712BC9 /* CreateAccountVC.swift in Sources */,
