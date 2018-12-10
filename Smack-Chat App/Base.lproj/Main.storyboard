@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="427.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dLa-2e-qvo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="dLa-2e-qvo" customClass="ChannelCell" customModule="Smack_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dLa-2e-qvo" id="KPF-do-trd">
@@ -92,6 +92,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelTitle" destination="82c-Gm-gGM" id="Cx2-ic-m3f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -132,6 +135,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="channelTable" destination="Ng8-5G-Ut5" id="jtF-Jt-6MU"/>
                         <outlet property="loginBtn" destination="VSD-p7-rtp" id="73A-vl-N7a"/>
                         <outlet property="userImage" destination="9np-z3-UWQ" id="gi4-A5-UVq"/>
                         <segue destination="XM3-8c-N9c" kind="presentation" identifier="toLogin" id="o3z-es-lak"/>

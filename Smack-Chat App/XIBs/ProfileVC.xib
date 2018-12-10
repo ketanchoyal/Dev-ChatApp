@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHj-6K-k7T">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-uO-hJp">
@@ -93,11 +93,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vHj-6K-k7T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="54h-VB-QPZ"/>
+                <constraint firstAttribute="bottom" secondItem="vHj-6K-k7T" secondAttribute="bottom" id="6Yc-Tj-GeA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vHj-6K-k7T" secondAttribute="trailing" id="8po-vI-aVi"/>
                 <constraint firstItem="vHj-6K-k7T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ary-C1-GRX"/>
                 <constraint firstItem="JXb-uO-hJp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BxO-Er-z8t"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vHj-6K-k7T" secondAttribute="bottom" id="ORc-PO-q48"/>
+                <constraint firstItem="vHj-6K-k7T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N46-FU-8Np"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JXb-uO-hJp" secondAttribute="trailing" constant="20" id="ZqV-Kw-OvA"/>
                 <constraint firstItem="JXb-uO-hJp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ilb-rs-0et"/>
                 <constraint firstItem="JXb-uO-hJp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tga-7R-Mnf"/>
