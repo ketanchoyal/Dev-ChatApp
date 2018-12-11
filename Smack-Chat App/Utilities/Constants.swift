@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Smack-Chat App
+//  Dev-Chat App
 //
 //  Created by Ketan Choyal on 07/12/18.
 //  Copyright © 2018 Ketan Choyal. All rights reserved.
@@ -18,7 +18,7 @@ let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 
 //Colors
-let smackPurplePlaceholder = #colorLiteral(red: 0.3631127477, green: 0.4045833051, blue: 0.8775706887, alpha: 0.5)
+let devchatPurplePlaceholder = #colorLiteral(red: 0.3631127477, green: 0.4045833051, blue: 0.8775706887, alpha: 0.5)
 
 //Notification Constants
 let NOTIF_USER_DATA_CHANGE = Notification.Name("notifUserDataChanged")

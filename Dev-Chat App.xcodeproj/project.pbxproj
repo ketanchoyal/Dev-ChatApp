@@ -258,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97ECC93A21B706EA0050E19E /* Build configuration list for PBXProject "Smack-Chat App" */;
+			buildConfigurationList = 97ECC93A21B706EA0050E19E /* Build configuration list for PBXProject "Dev-Chat App" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -519,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ketanchoyal.Smack-Chat-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ketanchoyal.Dev-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Smack-Chat App/Supporting Files/Smack-Chat App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -541,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ketanchoyal.Smack-Chat-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ketanchoyal.Dev-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Smack-Chat App/Supporting Files/Smack-Chat App-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -552,7 +552,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97ECC93A21B706EA0050E19E /* Build configuration list for PBXProject "Smack-Chat App" */ = {
+		97ECC93A21B706EA0050E19E /* Build configuration list for PBXProject "Dev-Chat App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97ECC94F21B706EB0050E19E /* Debug */,

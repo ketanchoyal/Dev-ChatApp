@@ -1,6 +1,6 @@
 //
 //  MessageService.swift
-//  Smack-Chat App
+//  Dev-Chat App
 //
 //  Created by Ketan Choyal on 10/12/18.
 //  Copyright © 2018 Ketan Choyal. All rights reserved.
@@ -89,7 +89,7 @@ class MessageService {
                         self.messages.append(message)
                     }
                     completion(true)
-                    print(self.messages)
+                    //print(self.messages)
                 }
                 
             } else {
