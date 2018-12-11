@@ -30,7 +30,7 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
-    func returnUIColoe(component : String) -> UIColor {
+    func returnUIColor(component : String) -> UIColor {
         //"[0.8509803921568627, 0.30980392156862746, 0.12156862745098039, 1]"
         
         let scanner = Scanner(string: component)

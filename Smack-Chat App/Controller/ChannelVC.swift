@@ -69,7 +69,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if AuthService.instance.isLoggedin {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
-            userImage.backgroundColor = UserDataService.instance.returnUIColoe(component: UserDataService.instance.avatarColor)
+            userImage.backgroundColor = UserDataService.instance.returnUIColor(component: UserDataService.instance.avatarColor)
         }
         else {
             loginBtn.setTitle("Login", for: .normal)

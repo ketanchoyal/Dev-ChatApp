@@ -613,16 +613,79 @@
                                     <action selector="msgSendPressed:" destination="Bgk-u5-hFs" eventType="touchUpInside" id="LYQ-da-TP5"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoW-H6-x1G">
+                                <rect key="frame" x="0.0" y="77" width="375" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="a5p-32-hSP" customClass="MessageCell" customModule="Smack_Chat_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5p-32-hSP" id="qxd-Kz-jBW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-w5-otd" customClass="CircleImage" customModule="Smack_Chat_App" customModuleProvider="target">
+                                                    <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="GAv-Cb-hX4"/>
+                                                        <constraint firstAttribute="height" constant="50" id="vJ1-LA-dD5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketan C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-Ll-uda">
+                                                    <rect key="frame" x="65" y="5" width="62" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQm-GO-eRM">
+                                                    <rect key="frame" x="132" y="10" width="61" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-5A-n4Y">
+                                                    <rect key="frame" x="65" y="39.5" width="285" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GXg-5A-n4Y" firstAttribute="top" secondItem="9Qw-Ll-uda" secondAttribute="bottom" constant="8" id="Atx-dp-bXr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GXg-5A-n4Y" secondAttribute="trailing" constant="10" id="FKT-in-qzh"/>
+                                                <constraint firstItem="GXg-5A-n4Y" firstAttribute="leading" secondItem="Uzo-w5-otd" secondAttribute="trailing" constant="10" id="LaB-nc-Awl"/>
+                                                <constraint firstItem="Uzo-w5-otd" firstAttribute="top" secondItem="qxd-Kz-jBW" secondAttribute="top" constant="5" id="R7F-gf-f1Q"/>
+                                                <constraint firstItem="9Qw-Ll-uda" firstAttribute="leading" secondItem="Uzo-w5-otd" secondAttribute="trailing" constant="10" id="RtA-Cr-ZjU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GXg-5A-n4Y" secondAttribute="bottom" constant="12" id="UFc-IG-urB"/>
+                                                <constraint firstItem="Uzo-w5-otd" firstAttribute="leading" secondItem="qxd-Kz-jBW" secondAttribute="leading" constant="5" id="ZEk-qj-1fL"/>
+                                                <constraint firstItem="eQm-GO-eRM" firstAttribute="centerY" secondItem="9Qw-Ll-uda" secondAttribute="centerY" id="aqt-YA-mh9"/>
+                                                <constraint firstItem="eQm-GO-eRM" firstAttribute="leading" secondItem="9Qw-Ll-uda" secondAttribute="trailing" constant="5" id="otu-NM-yvF"/>
+                                                <constraint firstItem="9Qw-Ll-uda" firstAttribute="top" secondItem="Uzo-w5-otd" secondAttribute="top" id="yg9-bW-8Hq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageBodyLbl" destination="GXg-5A-n4Y" id="HmA-hQ-cZt"/>
+                                            <outlet property="timeStampLbl" destination="eQm-GO-eRM" id="xdn-c3-zL6"/>
+                                            <outlet property="userNameLbl" destination="9Qw-Ll-uda" id="e6B-PL-Sis"/>
+                                            <outlet property="userProfileImg" destination="Uzo-w5-otd" id="K28-lY-0Zn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XcC-XG-ydo" firstAttribute="leading" secondItem="sxV-vS-jwp" secondAttribute="trailing" constant="2" id="3mn-qH-yFA"/>
                             <constraint firstItem="sxV-vS-jwp" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" constant="2" id="4Gd-DZ-9IY"/>
                             <constraint firstItem="aey-DD-AwS" firstAttribute="bottom" secondItem="sxV-vS-jwp" secondAttribute="bottom" constant="8" id="GZW-xz-WVi"/>
+                            <constraint firstItem="eoW-H6-x1G" firstAttribute="top" secondItem="Usu-tt-Ngj" secondAttribute="bottom" id="NpN-JK-NJl"/>
+                            <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="eoW-H6-x1G" secondAttribute="bottom" constant="30" id="VXW-Jo-10S"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="fAd-IQ-yFv"/>
+                            <constraint firstItem="eoW-H6-x1G" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="gmu-OU-4B4"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="top" secondItem="oPP-8c-qTw" secondAttribute="top" id="i2k-hb-LWi"/>
                             <constraint firstItem="XcC-XG-ydo" firstAttribute="centerY" secondItem="sxV-vS-jwp" secondAttribute="centerY" id="oHn-S9-b5g"/>
                             <constraint firstItem="aey-DD-AwS" firstAttribute="trailing" secondItem="XcC-XG-ydo" secondAttribute="trailing" constant="4" id="pIF-Ut-15y"/>
+                            <constraint firstItem="eoW-H6-x1G" firstAttribute="trailing" secondItem="aey-DD-AwS" secondAttribute="trailing" id="xTQ-fP-ml2"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="trailing" secondItem="aey-DD-AwS" secondAttribute="trailing" id="y9Y-gr-vHg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aey-DD-AwS"/>
@@ -630,6 +693,7 @@
                     <connections>
                         <outlet property="chatChannelLabel" destination="TGc-xs-YjE" id="4UI-oo-hT0"/>
                         <outlet property="menuBtn" destination="MbN-LU-De1" id="yhD-oY-2yg"/>
+                        <outlet property="messageTable" destination="eoW-H6-x1G" id="vs4-ya-2tw"/>
                         <outlet property="messageTxtBox" destination="sxV-vS-jwp" id="F9d-U1-pLW"/>
                     </connections>
                 </viewController>

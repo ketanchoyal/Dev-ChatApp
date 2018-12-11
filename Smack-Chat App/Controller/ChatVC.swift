@@ -8,16 +8,23 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
-
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     //IBOutlet
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var chatChannelLabel: UILabel!
     @IBOutlet weak var messageTxtBox: AttributedTextColor!
+    @IBOutlet weak var messageTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
+        
+        messageTable.delegate = self
+        messageTable.dataSource = self
+        
+        messageTable.estimatedRowHeight = 80
+        messageTable.rowHeight = UITableView.automaticDimension
         
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
@@ -89,9 +96,26 @@ class ChatVC: UIViewController {
         guard let channelId = MessageService.instance.selectedChannel?.id else { return }
         MessageService.instance.findAllMessagesForChannel(channelID: channelId) { (success) in
             if success {
-                
+                self.messageTable.reloadData()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
+            
+            let message = MessageService.instance.messages[indexPath.row]
+            
+            cell.configureCell(message: message)
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.messages.count
     }
 
 }
