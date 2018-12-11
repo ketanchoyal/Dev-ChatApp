@@ -15,6 +15,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var chatChannelLabel: UILabel!
     @IBOutlet weak var messageTxtBox: AttributedTextColor!
     @IBOutlet weak var messageTable: UITableView!
+    @IBOutlet weak var sendBtn: UIButton!
+    
+    //Variable
+    var isTyping = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         messageTable.delegate = self
         messageTable.dataSource = self
+        
+        sendBtn.isHidden = true
         
         messageTable.estimatedRowHeight = 80
         messageTable.rowHeight = UITableView.automaticDimension
@@ -36,6 +42,17 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChanged(_:)), name: NOTIF_USER_DATA_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        
+        SocketService.instance.getMessage { (success) in
+            if success {
+                self.messageTable.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    
+                    self.messageTable.scrollToRow(at: endIndex, at: UITableView.ScrollPosition.bottom, animated: true)
+                }
+            }
+        }
         
         if AuthService.instance.isLoggedin {
             AuthService.instance.findUserByEmail(completion: { (success) in
@@ -61,10 +78,26 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @objc func userDataDidChanged(_ notif : Notification) {
         if AuthService.instance.isLoggedin {
             onLoginGetMessages()
+            messageTxtBox.isHidden = false
         } else {
             chatChannelLabel.text = "Please Log in"
+            messageTable.reloadData()
+            messageTxtBox.isHidden = true
         }
     }
+    
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if messageTxtBox.text == "" {
+            isTyping = false
+            sendBtn.isHidden = true
+        } else {
+            if isTyping == false {
+                sendBtn.isHidden = false
+            }
+            isTyping = true
+        }
+    }
+    
     @IBAction func msgSendPressed(_ sender: Any) {
         if AuthService.instance.isLoggedin {
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }

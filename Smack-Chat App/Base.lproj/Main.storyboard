@@ -601,6 +601,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Message"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="messageBoxEditing:" destination="Bgk-u5-hFs" eventType="editingChanged" id="79L-GC-TgM"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcC-XG-ydo">
                                 <rect key="frame" x="341" y="624" width="30" height="30"/>
@@ -613,7 +616,7 @@
                                     <action selector="msgSendPressed:" destination="Bgk-u5-hFs" eventType="touchUpInside" id="LYQ-da-TP5"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoW-H6-x1G">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoW-H6-x1G">
                                 <rect key="frame" x="0.0" y="77" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -621,7 +624,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5p-32-hSP" id="qxd-Kz-jBW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-w5-otd" customClass="CircleImage" customModule="Smack_Chat_App" customModuleProvider="target">
@@ -695,6 +698,7 @@
                         <outlet property="menuBtn" destination="MbN-LU-De1" id="yhD-oY-2yg"/>
                         <outlet property="messageTable" destination="eoW-H6-x1G" id="vs4-ya-2tw"/>
                         <outlet property="messageTxtBox" destination="sxV-vS-jwp" id="F9d-U1-pLW"/>
+                        <outlet property="sendBtn" destination="XcC-XG-ydo" id="GFH-5E-QGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcy-jb-AS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
