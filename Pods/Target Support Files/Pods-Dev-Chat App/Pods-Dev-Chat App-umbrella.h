@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Smack_Chat_AppVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Smack_Chat_AppVersionString[];
+FOUNDATION_EXPORT double Pods_Dev_Chat_AppVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Dev_Chat_AppVersionString[];
 
