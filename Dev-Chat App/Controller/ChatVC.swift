@@ -16,6 +16,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var messageTxtBox: AttributedTextColor!
     @IBOutlet weak var messageTable: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var onlineUserLabel: UILabel!
     
     //Variable
     var isTyping = false
@@ -54,6 +55,35 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
         
+        SocketService.instance.getTypingUsers { (typingUsers) in
+            var names = ""
+            var noOfTypers = 0
+            
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            let name = UserDataService.instance.name
+            
+            for (typingUser, channel) in typingUsers {
+                if typingUser != name && channel == channelId {
+                    if names == "" {
+                        names = typingUser
+                    } else {
+                        names = names + ", " + typingUser
+                    }
+                    noOfTypers += 1
+                }
+            }
+            
+            if noOfTypers > 0 && AuthService.instance.isLoggedin {
+                var verb = "is"
+                if noOfTypers > 1 {
+                    verb = "are"
+                }
+                self.onlineUserLabel.text = "\(names) \(verb) typing..."
+            } else {
+                self.onlineUserLabel.text = ""
+            }
+        }
+        
         if AuthService.instance.isLoggedin {
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGE, object: nil)
@@ -87,12 +117,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func messageBoxEditing(_ sender: Any) {
+        
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        let name = UserDataService.instance.name
+        
         if messageTxtBox.text == "" {
             isTyping = false
             sendBtn.isHidden = true
+            SocketService.instance.stopTyping(userName: name, channelId: channelId)
         } else {
             if isTyping == false {
                 sendBtn.isHidden = false
+                SocketService.instance.startTyping(userName: name, channelId: channelId)
             }
             isTyping = true
         }
@@ -108,6 +144,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.messageTxtBox.text = nil
                     self.messageTxtBox.placeholderText = "message"
                 }
+                SocketService.instance.stopTyping(userName: UserDataService.instance.name, channelId: channelId)
             }
         }
     }

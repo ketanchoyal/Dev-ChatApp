@@ -32,8 +32,8 @@
         <!--ChannelVC-->
         <scene sceneID="KCO-6d-yDn">
             <objects>
-                <viewController id="lVA-2p-gcg" customClass="ChannelVC" customModule="Smack_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z6B-wM-U2N" customClass="GradientView" customModule="Smack_Chat_App" customModuleProvider="target">
+                <viewController id="lVA-2p-gcg" customClass="ChannelVC" customModule="Dev_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6B-wM-U2N" customClass="GradientView" customModule="Dev_Chat_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -64,7 +64,7 @@
                                     <action selector="loginBtnPressed:" destination="lVA-2p-gcg" eventType="touchUpInside" id="NhU-2K-B7e"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9np-z3-UWQ" customClass="CircleImage" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9np-z3-UWQ" customClass="CircleImage" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="4Vk-sa-vDD"/>
@@ -75,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="124.5" width="375" height="427.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="dLa-2e-qvo" customClass="ChannelCell" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="dLa-2e-qvo" customClass="ChannelCell" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dLa-2e-qvo" id="KPF-do-trd">
@@ -151,12 +151,12 @@
         <!--LoginVC-->
         <scene sceneID="C2z-Ca-fNE">
             <objects>
-                <viewController id="XM3-8c-N9c" customClass="LoginVC" customModule="Smack_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XM3-8c-N9c" customClass="LoginVC" customModule="Dev_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IPU-3Z-Ip9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgJ-ll-dxl" customClass="RoundedButton" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgJ-ll-dxl" customClass="RoundedButton" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="280" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -200,7 +200,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-6r-gWb">
                                 <rect key="frame" x="62.5" y="160" width="250" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-rl-dsn" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-rl-dsn" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="duW-Lz-eci"/>
@@ -220,7 +220,7 @@
                                             <constraint firstAttribute="height" constant="2" id="KHg-YA-MD5"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-f9-AkY" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-f9-AkY" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="47" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Yuv-hm-vRd"/>
@@ -289,12 +289,12 @@
         <!--Create AccountVC-->
         <scene sceneID="NPB-ew-sWE">
             <objects>
-                <viewController id="rmG-Ft-RR8" customClass="CreateAccountVC" customModule="Smack_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rmG-Ft-RR8" customClass="CreateAccountVC" customModule="Dev_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWI-gU-P0s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1D-Qs-zSZ" customClass="RoundedButton" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1D-Qs-zSZ" customClass="RoundedButton" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="592" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -324,7 +324,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hXT-Ov-QNY">
                                 <rect key="frame" x="62.5" y="143" width="250" height="127"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-iP-DtV" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-iP-DtV" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Lxz-rg-g0s"/>
@@ -344,7 +344,7 @@
                                             <constraint firstAttribute="height" constant="2" id="uur-nW-7Cb"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOy-rf-elx" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOy-rf-elx" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="47" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="0fH-6L-okA"/>
@@ -364,7 +364,7 @@
                                             <constraint firstAttribute="width" constant="250" id="w1F-KI-plS"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jap-ju-76C" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jap-ju-76C" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="94" width="250" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="tmY-UB-pvm"/>
@@ -392,7 +392,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7ND-5E-lw7" customClass="CircleImage" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7ND-5E-lw7" customClass="CircleImage" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="300" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hFn-sM-VzG"/>
@@ -468,7 +468,7 @@
         <!--Avatar PickerVC-->
         <scene sceneID="8Uv-fr-ILj">
             <objects>
-                <viewController id="xYh-s5-8LO" customClass="AvatarPickerVC" customModule="Smack_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xYh-s5-8LO" customClass="AvatarPickerVC" customModule="Dev_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MUX-SX-ZHu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +496,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="zKj-E1-cGW" customClass="AvatarCell" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="zKj-E1-cGW" customClass="AvatarCell" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -558,12 +558,12 @@
         <!--ChatVC-->
         <scene sceneID="FPl-C5-0kv">
             <objects>
-                <viewController id="Bgk-u5-hFs" customClass="ChatVC" customModule="Smack_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bgk-u5-hFs" customClass="ChatVC" customModule="Dev_Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oPP-8c-qTw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usu-tt-Ngj" customClass="GradientView" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usu-tt-Ngj" customClass="GradientView" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-LU-De1">
@@ -590,7 +590,7 @@
                                     <constraint firstItem="TGc-xs-YjE" firstAttribute="centerY" secondItem="MbN-LU-De1" secondAttribute="centerY" id="glY-BY-oEq"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-vS-jwp" customClass="AttributedTextColor" customModule="Smack_Chat_App" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-vS-jwp" customClass="AttributedTextColor" customModule="Dev_Chat_App" customModuleProvider="target">
                                 <rect key="frame" x="2" y="619" width="337" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eDY-A5-BTC"/>
@@ -620,14 +620,14 @@
                                 <rect key="frame" x="0.0" y="77" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="a5p-32-hSP" customClass="MessageCell" customModule="Smack_Chat_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="a5p-32-hSP" customClass="MessageCell" customModule="Dev_Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5p-32-hSP" id="qxd-Kz-jBW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-w5-otd" customClass="CircleImage" customModule="Smack_Chat_App" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-w5-otd" customClass="CircleImage" customModule="Dev_Chat_App" customModuleProvider="target">
                                                     <rect key="frame" x="5" y="5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="GAv-Cb-hX4"/>
@@ -675,18 +675,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVZ-cA-h4J">
+                                <rect key="frame" x="2" y="592" width="369" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="vP4-4V-oiF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fVZ-cA-h4J" firstAttribute="top" secondItem="eoW-H6-x1G" secondAttribute="bottom" constant="3" id="3UV-kR-ibG"/>
                             <constraint firstItem="XcC-XG-ydo" firstAttribute="leading" secondItem="sxV-vS-jwp" secondAttribute="trailing" constant="2" id="3mn-qH-yFA"/>
                             <constraint firstItem="sxV-vS-jwp" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" constant="2" id="4Gd-DZ-9IY"/>
                             <constraint firstItem="aey-DD-AwS" firstAttribute="bottom" secondItem="sxV-vS-jwp" secondAttribute="bottom" constant="8" id="GZW-xz-WVi"/>
+                            <constraint firstItem="aey-DD-AwS" firstAttribute="trailing" secondItem="fVZ-cA-h4J" secondAttribute="trailing" constant="4" id="LC6-fN-kFG"/>
+                            <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="fVZ-cA-h4J" secondAttribute="bottom" constant="3" id="Mxj-Fd-LXo"/>
                             <constraint firstItem="eoW-H6-x1G" firstAttribute="top" secondItem="Usu-tt-Ngj" secondAttribute="bottom" id="NpN-JK-NJl"/>
                             <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="eoW-H6-x1G" secondAttribute="bottom" constant="30" id="VXW-Jo-10S"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="fAd-IQ-yFv"/>
                             <constraint firstItem="eoW-H6-x1G" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="gmu-OU-4B4"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="top" secondItem="oPP-8c-qTw" secondAttribute="top" id="i2k-hb-LWi"/>
                             <constraint firstItem="XcC-XG-ydo" firstAttribute="centerY" secondItem="sxV-vS-jwp" secondAttribute="centerY" id="oHn-S9-b5g"/>
+                            <constraint firstItem="fVZ-cA-h4J" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" constant="2" id="oeL-in-oo2"/>
                             <constraint firstItem="aey-DD-AwS" firstAttribute="trailing" secondItem="XcC-XG-ydo" secondAttribute="trailing" constant="4" id="pIF-Ut-15y"/>
                             <constraint firstItem="eoW-H6-x1G" firstAttribute="trailing" secondItem="aey-DD-AwS" secondAttribute="trailing" id="xTQ-fP-ml2"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="trailing" secondItem="aey-DD-AwS" secondAttribute="trailing" id="y9Y-gr-vHg"/>
@@ -698,6 +711,7 @@
                         <outlet property="menuBtn" destination="MbN-LU-De1" id="yhD-oY-2yg"/>
                         <outlet property="messageTable" destination="eoW-H6-x1G" id="vs4-ya-2tw"/>
                         <outlet property="messageTxtBox" destination="sxV-vS-jwp" id="F9d-U1-pLW"/>
+                        <outlet property="onlineUserLabel" destination="fVZ-cA-h4J" id="l9g-lk-pC4"/>
                         <outlet property="sendBtn" destination="XcC-XG-ydo" id="GFH-5E-QGs"/>
                     </connections>
                 </viewController>
