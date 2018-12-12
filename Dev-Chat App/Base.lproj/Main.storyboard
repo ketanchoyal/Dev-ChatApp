@@ -617,7 +617,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoW-H6-x1G">
-                                <rect key="frame" x="0.0" y="77" width="375" height="512"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="a5p-32-hSP" customClass="MessageCell" customModule="Dev_Chat_App" customModuleProvider="target">
@@ -676,9 +676,9 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVZ-cA-h4J">
-                                <rect key="frame" x="2" y="592" width="369" height="24"/>
+                                <rect key="frame" x="2" y="596" width="369" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="vP4-4V-oiF"/>
+                                    <constraint firstAttribute="height" constant="20" id="vP4-4V-oiF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -694,7 +694,7 @@
                             <constraint firstItem="aey-DD-AwS" firstAttribute="trailing" secondItem="fVZ-cA-h4J" secondAttribute="trailing" constant="4" id="LC6-fN-kFG"/>
                             <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="fVZ-cA-h4J" secondAttribute="bottom" constant="3" id="Mxj-Fd-LXo"/>
                             <constraint firstItem="eoW-H6-x1G" firstAttribute="top" secondItem="Usu-tt-Ngj" secondAttribute="bottom" id="NpN-JK-NJl"/>
-                            <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="eoW-H6-x1G" secondAttribute="bottom" constant="30" id="VXW-Jo-10S"/>
+                            <constraint firstItem="sxV-vS-jwp" firstAttribute="top" secondItem="eoW-H6-x1G" secondAttribute="bottom" constant="26" id="VXW-Jo-10S"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="fAd-IQ-yFv"/>
                             <constraint firstItem="eoW-H6-x1G" firstAttribute="leading" secondItem="aey-DD-AwS" secondAttribute="leading" id="gmu-OU-4B4"/>
                             <constraint firstItem="Usu-tt-Ngj" firstAttribute="top" secondItem="oPP-8c-qTw" secondAttribute="top" id="i2k-hb-LWi"/>
