@@ -73,17 +73,27 @@ class SocketService: NSObject {
             guard let id = dataArray[6] as? String else { return }
             guard let timeStamp = dataArray[7] as? String else { return }
             
+            let newMessage = Message.init(message: messageBody, id: id, userId: userId, channelId: channelId, userName: userName, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
+            
             if channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedin {
-                
-                let newMessage = Message.init(message: messageBody, id: id, userId: userId, channelId: channelId, userName: userName, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
-                
                 MessageService.instance.messages.append(newMessage)
-                
                 completion(true)
-                
             } else {
+                MessageService.instance.unreadChannels.append(newMessage.channelId)
                 completion(false)
             }
+            
+//            if channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedin {
+//
+//                let newMessage = Message.init(message: messageBody, id: id, userId: userId, channelId: channelId, userName: userName, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
+//
+//                MessageService.instance.messages.append(newMessage)
+//
+//                completion(true)
+//
+//            } else {
+//                completion(false)
+//            }
         }
     }
     
